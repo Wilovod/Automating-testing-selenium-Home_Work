@@ -36,6 +36,9 @@ def test_step_3(site, select_input_login, select_input_password, select_input_bu
     input2.send_keys(testdata['password'])
     btn = site.find_element('css', select_input_button)  # Клик по кнопке входна на сайт
     btn.click()
+
+    time.sleep(2)
+
     click_1 = site.find_element('xpath', new_post)  # Создание поста
     click_1.click()
     post_1 = site.find_element('xpath', select_post_title)  # Ввод названия поста
